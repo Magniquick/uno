@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "uno"
+version = "0.1.0"
+authors = [{ name = "Magniquick" }]
+description = "A Python implementation of the Uno card game"
+readme = "README.md"
+license = { text = "BSD-3-Clause" }
+requires-python = ">=3.7"
+dependencies = ["pgzero"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/magniquick/uno"
+"Bug Tracker" = "https://github.com/magniquick/uno/issues"
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["uno"]
